@@ -1,0 +1,40 @@
+<!-- MLB CODING CHALLENGE
+Steven Hendricks
+Oct 2, 2018 -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>MLB Secret Santa</title>
+  <link rel="stylesheet" type="text/css" href="secret-santa.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h1>Secret Santa Challenge</h1>
+
+    <form>
+      Add people to the Secret Santa Game:<br><br>
+      <input id="name" type="text" name="firstname"><br><br>
+      <div><button id="add">Add a member</button></div><br><br>
+    </form>
+
+    <div class="select-wrap" id="peopleWrap">
+      <select id="people"></select>
+      <span class="arrow"></span>
+    </div>
+
+
+
+    <div><button id="choose">Find out who you have!</button></div>
+    <div id="result"></div>
+    <div class="close"><span id="close"></span></div>
+  </div>
+
+  <script type="text/javascript" src="secret-santa.js"></script>
+</body>
+
+</html>
