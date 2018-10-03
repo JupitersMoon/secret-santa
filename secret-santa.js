@@ -4,17 +4,21 @@
 
 window.onload = function() {
 
+
+//MEMBER ARRAY
   var give = ['Jeff', 'Tony', 'Caroline', 'Cindy', 'Wes', 'Tina', 'Christine', 'Penelope', 'Pat', 'Stevo', 'Jasper', 'Rose', 'Howard'];
 
+
+//ADD A MEMBER
   add.onclick = function() {
     var nameInput = document.getElementById('name');
-    preventDefault();
+    // preventDefault();
     give.push(nameInput.value)
+    // return false
     console.log(nameInput.value);
     console.log(give);
 
   };
-
 
   var receive = give.concat();
   var peopleWrap = document.getElementById('peopleWrap');
@@ -23,6 +27,8 @@ window.onload = function() {
   var result = document.getElementById('result');
   var close = document.getElementById('close');
 
+
+//PULLDOWN LIST
   function drawList() {
     people.innerHTML = '<option value="">What is your Name?</option>';
     for (var i = give.length - 1; i >= 0; i--) {
@@ -35,9 +41,7 @@ window.onload = function() {
 
   drawList();
 
-
-
-
+//CHOOSE A PERSON
   function selectPerson(person) {
     var name = give[person];
     var nameIndex = receive.indexOf(name);
@@ -67,6 +71,8 @@ window.onload = function() {
     }
   };
 
+
+//CLEANUP
   close.onclick = function() {
     result.innerHTML = "";
     close.innerHTML = "";
